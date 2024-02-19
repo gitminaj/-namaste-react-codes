@@ -1,13 +1,14 @@
-body{
+body {
     margin: 0;
     padding: 0
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
 
-.logo img{
+.logo img {
     width: 70px;
     height: 60px;
     border-radius: 20px;
@@ -15,37 +16,38 @@ body{
     cursor: pointer;
 }
 
-.nav-list{
+.nav-list {
     list-style: none;
     display: flex;
     align-items: center;
 }
 
-.nav-list li{
+.nav-list li {
     padding: 10px;
     cursor: pointer;
+    color: black;
 }
 
-.nav-list button{
+.nav-list button {
     padding: 5px 8px;
     margin-right: 10px;
     cursor: pointer;
     border-radius: 8px;
 }
 
-.nav-list button:hover{
+.nav-list button:hover {
     background-color: rgb(231, 225, 218);
 }
 
-.header{
-    display:flex;
+.header {
+    display: flex;
     justify-content: space-between;
     background-color: rgb(238, 235, 231);
     border-radius: 10px;
     box-shadow: 3px 3px 5px rgb(189, 179, 179);
 }
 
-.res-card{
+.res-card {
     border: 2px solid rgb(202, 200, 200);
     background-color: rgb(196, 233, 231);
     color: black;
@@ -61,52 +63,52 @@ body{
     border-radius: 10px;
 }
 
-.res-card:hover{
+.res-card:hover {
     border: 2px solid black;
 }
 
-.res-card img{
+.res-card img {
     padding: 5px;
     width: 90%;
     height: 150px;
     border-radius: 10px;
 }
 
-.filter{
+.filter {
     margin: 10px;
 }
 
-.res-container{
+.res-container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.top-res-filter{
+.top-res-filter {
     padding: 5px;
     margin: 10px;
     cursor: pointer;
     border-radius: 5px;
 }
 
-.filter input{
+.filter input {
     padding: 5px;
-    
+
 }
 
-.submit-btn{
+.submit-btn {
     border-radius: 5px;
     margin: 5px;
     padding: 5px;
     cursor: pointer;
 }
 
-.shimmer-body{
+.shimmer-body {
     margin: 10px;
     flex-wrap: wrap;
     display: flex;
 }
 
-.shimmer-card{
+.shimmer-card {
     margin: 5px;
     height: 280px;
     width: 200px;
@@ -114,3 +116,22 @@ body{
     border-radius: 15px;
 }
 
+.about {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    background: #000000a4;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+}
+
+.about-container{
+    height: 100vh;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1543353071-10c8ba85a904?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}

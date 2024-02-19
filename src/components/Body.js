@@ -22,14 +22,17 @@ const Body= ()=>{
     
     const json = await data.json();
 
-    const restaurnats = json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    const restaurnats = json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
     setResDetail(restaurnats);
     setAllResDetail(restaurnats);
+
   }
 
- if(resDetail.length === 0){
+ if(resDetail?.length === 0){
   return <Shimmer />
  }
+
  else{
    return(
        <div>
@@ -60,7 +63,7 @@ const Body= ()=>{
            </div>
            <div className="res-container">
              {
-               resDetail.map((res)=>{  
+               resDetail?.map((res)=>{  
              return (<Link key={res.info.id} to={"/restaurant/" + res.info.id} style={{ textDecoration: 'none' }}> <ResCard resData={res}/>  </Link>)
              })
              }
