@@ -328,4 +328,71 @@
  ---> " : " is used to enter dynamic value.<br>
  ---> We can get this dynamic value using useParam hook.
 
+## 8. Learning from eight episode (Let's get classy)
+
++ **Class component**
+
+---> Class component is a class which extends React component and it has render() method which returns some peice of JSX.
+  syntax.
+```
+class UserClass extends React.Component{
+ render(){
+   return(
+      // JSX here
+
+)
+}}
+```
+   ---> import and export is same for class based component as functional component.<br>
+   ---> Props are recived in constructor inside class component.
+```
+  constructor(props){
+     super(props)
+}
+```
+  ---> State variable in class component is created inside constructor, it is called everytime a new instance of class is created.
+```
+constructor(props){
+super(props)
+    this.state={
+      count: 0
+      }
+}
+```
+
+   ---> we use this.setState to update state variable.
+
+```
+ <button onClick = { () => {
+      this.setState({
+             count: this.state.count + 1;
+          })
+    }}
+ >
+```
+
++ **Life cycle of class component**<br>
+
+   ![image](https://github.com/gitminaj/-namaste-react-codes/assets/75945276/10aba868-98de-4a7a-b9e3-155e11e06104)
+
+   ---> When class component render/called/mounted.<br>
+     1. Contructor is called first.
+     2. Then render is called second.
+     3. Finally componentDidMount() is called.
+
+    ---> componentDidMount method executes when the whole class is loaded/mounted on web.
+
+    ---> Lifecycle of nested class component.
+```
+Parent constructor --> Parent render --> Child constructor --> Child render --> child componentDidMount --> parent componentDidMount
+```
+
+   ---> Lifecycle in case of more than one nested child.
+```
+Parent constructor --> Parent render --> Child constructor --> Child render -->
+Child2 constructor --> Child2 render --> 
+Child componentDidMount --> Child2 componentDidMount --> parent componentDidMount
+```
+   ---> In this behaviour of componentDidMount changes as react clubs all the child render together in render phase, then commit phase happens.<br>
+   
 Most React tutorials typically commence with the installation of a bundler and swiftly transition to React code. However, this particular tutorial takes a distinctive approach by elucidating the entire process from the ground up. It delves into the intricacies of constructing React, leaving me astounded and pleasantly surprised at every turn. Each minute unfolds a new revelation, fostering a continuous learning experience.
