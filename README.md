@@ -395,7 +395,7 @@ Child componentDidMount --> Child2 componentDidMount --> parent componentDidMoun
 ```
    ---> In this behaviour of componentDidMount changes as react clubs all the child render together in render phase, then commit phase happens.<br>
 
-## 9. Learning from nineth episode (Optimising our App)
+## 9. Learning from ninth episode (Optimising our App)
 
 + **Single Responsibility Principle**<br>
 
