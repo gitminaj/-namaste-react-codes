@@ -10,7 +10,6 @@ class About extends React.Component{
                 name: "...",
                 location: "---"
             }
-            
         }
         console.log("constructor")
     }
@@ -19,7 +18,7 @@ class About extends React.Component{
         const data = await fetch("https://api.github.com/users/gitminaj");
 
         const json = await data.json();
-        
+
         this.setState({userData : json})
 
     }
@@ -33,6 +32,9 @@ class About extends React.Component{
                     <h1>Name: {name}</h1>
                     <h1>location: {location}</h1>
                     <h1>designation: CEO<span><sub className="small-font">future</sub></span></h1>
+                    <h1>More about us</h1>
+                    <p>we are serving people form last one decade, not just delivering food but also the love, care and happiness.</p>
+                    <p>And we will continue doing so, lets give us a try and then make a decision.</p>
                 </div>
             </div>
         )

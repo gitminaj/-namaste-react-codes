@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     padding: 0
 }
@@ -138,4 +138,8 @@ body {
 
 .small-font{
     font-size: 8px;
-}
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
