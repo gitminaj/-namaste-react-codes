@@ -394,5 +394,39 @@ Child2 constructor --> Child2 render -->
 Child componentDidMount --> Child2 componentDidMount --> parent componentDidMount
 ```
    ---> In this behaviour of componentDidMount changes as react clubs all the child render together in render phase, then commit phase happens.<br>
+
+## 9. Learning from nineth episode (Optimising our App)
+
++ **Single Responsibility Principle**<br>
+
+  ---> Every component/function should have single responsibility.<br>
+  ---> **Modularity**: breaking down the code in small modules.<br>
+  ---> It makes easy to maintain and test, we can also reuse.<br>
+
+**In this session I also learned how to make custom hooks**<br>
+
+   ---> CustomHooks are normal utility functions, we add **use** before the name.
+
++ **Chunking, Code Splitting, Dynamic Bundling, Lazy Loading, On Demand Loading**
+
+  ---> lazy() is a js function which is given by react.<br>
+  ---> Lazy loading is a technique in React that allows you to load components, modules, or assets asynchronously, improving the loading time of our application.<br>
+  Syntax:<br>
+```
+    const Grocery = lazy( () => import("./Components/Grocery"));
+```
+   ---> **Suspense** component, which will display a fallback UI while the component is being loaded.<br>
+   Syntax:
+```
+   {
+      Path:"/grocery",
+      element: (
+                  <Suspense fallback={<h1> Loading </h1>}>
+                        <Grocery/>
+                   </Suspense>
+                )
+    }
+```
+   ---> fallback is the placeholder till the actuall content is loaded.<br>
    
 Most React tutorials typically commence with the installation of a bundler and swiftly transition to React code. However, this particular tutorial takes a distinctive approach by elucidating the entire process from the ground up. It delves into the intricacies of constructing React, leaving me astounded and pleasantly surprised at every turn. Each minute unfolds a new revelation, fostering a continuous learning experience.
