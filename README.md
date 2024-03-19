@@ -436,7 +436,7 @@ Child componentDidMount --> Child2 componentDidMount --> parent componentDidMoun
    + **First we installed tailwind in our project.** <br>
        ---> You can find detail tutorial on tailwind website: [here](https://tailwindcss.com/docs/installation/framework-guides) Choose your bundler and kick-start.
    + **Practised and tried to memorise classes and now i am comfortable with tailwind and loving it**<br>
-   + **Below is my home page after using tailwing**<br>
+   + **Below is my home page after using tailwind**<br><br>
      ![image](https://github.com/gitminaj/-namaste-react-codes/assets/75945276/4f664e85-fc44-4147-aa5c-2acf34fab7a2)
 
    
