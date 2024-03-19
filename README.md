@@ -428,5 +428,16 @@ Child componentDidMount --> Child2 componentDidMount --> parent componentDidMoun
     }
 ```
    ---> fallback is the placeholder till the actuall content is loaded.<br>
+
+   ## 10. Learning from tenth episode (Jo dikhta hai, vo bikta hai)
+
+   + **In this episode we learned Tailwind css.** <br>
+       ---> Till this point we were using vanilla css, now we shifted to tailwind.
+   + **First we installed tailwind in our project.** <br>
+       ---> You can find detail tutorial on tailwind website: [here](https://tailwindcss.com/docs/installation/framework-guides) Choose your bundler and kick-start.
+   + **Practised and tried to memorise classes and now i am comfortable with tailwind and loving it**<br>
+   + **Below is my home page after using tailwing**<br>
+     ![image](https://github.com/gitminaj/-namaste-react-codes/assets/75945276/4f664e85-fc44-4147-aa5c-2acf34fab7a2)
+
    
 Most React tutorials typically commence with the installation of a bundler and swiftly transition to React code. However, this particular tutorial takes a distinctive approach by elucidating the entire process from the ground up. It delves into the intricacies of constructing React, leaving me astounded and pleasantly surprised at every turn. Each minute unfolds a new revelation, fostering a continuous learning experience.
