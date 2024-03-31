@@ -9,7 +9,7 @@ const Header = () =>{
   const [loginToggle, setLoginToggle] = useState("Login");
 
     return(
-        <div className="flex bg-slate-300 justify-between shadow-md shadow-gray-900" >
+        <div className="flex bg-slate-300 justify-between shadow-md shadow-gray-900 mb-4" >
             <div className="flex items-center justify-center">
                 <img src={LOGO_URL} className="w-20 rounded-lg ml-1"/>
             </div>

@@ -35,20 +35,20 @@ const Body= ()=>{
 
  else{
    return(
-       <div>
-           <div className="filter m-2">
-               <input className="border rounded-sm border-black m-2 pl-1" type="text" value={searchText} onChange={(e)=>{
+       <div className="flex flex-col">
+           <div className="filter m-2 flex justify-center">
+               <input className="border rounded-md border-black mx-2 pl-1 w-1/4 " type="text" value={searchText} onChange={(e)=>{
                 setSearchText(e.target.value);
                }}></input>
 
-               <button className="mr-2 border border-black px-4 rounded-sm bg-green-400 hover:bg-green-500" onClick={() =>{
+               <button className="mr-2 border border-black px-4 rounded-lg bg-black text-white hover:bg-slate-800" onClick={() =>{
                   const searched_res = allResDetail.filter(
                     (res)=> res.info.name.toLowerCase().includes(searchText)
                   );
                   setResDetail(searched_res)
-               }}>Submit</button>
+               }}>SEARCH</button>
   
-               <button className="mr-2 border border-black px-4 rounded-sm bg-red-400 hover:bg-red-500 " onClick={()=>{
+               <button className="mr-2 border border-black px-4 rounded-lg bg-black text-white hover:bg-slate-800" onClick={()=>{
                  if(buttonStatus === "Top rated"){
                    setButtonStatus("All restro");
                    const resData = resDetail.filter((res)=>res.info.avgRating > 4);
@@ -56,12 +56,12 @@ const Body= ()=>{
                  }
                  else {
                    setResDetail(allResDetail);
-                   setButtonStatus("Top rated");
+                   setButtonStatus("TOP RATED");
                  }
                }}>{buttonStatus}</button>
                
            </div>
-           <div className="flex flex-wrap">
+           <div className="flex flex-wrap w-[70vw] m-auto">
                 {
                   resDetail?.map((res)=>{  
                 return (<Link key={res.info.id} to={"/restaurant/" + res.info.id} style={{ textDecoration: 'none' }}> <ResCard resData={res}/>  </Link>)
