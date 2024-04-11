@@ -2,11 +2,17 @@ import React, {useState} from "react";
 import LOGO_URL  from "../utils/constants";
 import { Link } from "react-router-dom";
 import useInternetStatus from "../utils/useInternetStatus";
+import UserContext from "../utils/UserContext";
+import {useContext} from "react";
 
 const Header = () =>{
     
   const status = useInternetStatus();
   const [loginToggle, setLoginToggle] = useState("Login");
+
+  const userContext = useContext(UserContext);
+
+  console.log(userContext)
 
     return(
         <div className="flex bg-slate-300 justify-between shadow-md shadow-gray-900 mb-4" >
@@ -20,6 +26,7 @@ const Header = () =>{
                 <li><Link to="/about" style={{ textDecoration: 'none' }}>About us</Link></li>
                 <li><Link to="/contact" style={{ textDecoration: 'none' }}>Contact us</Link></li>
                 <li><Link to="/grocery" style={{ textDecoration: 'none' }}>Grocery</Link></li>
+                <li>{userContext.name}</li>
                 </ul>
                 
                 <button className="m-6" onClick={ () => {
