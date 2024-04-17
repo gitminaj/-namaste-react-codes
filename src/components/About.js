@@ -32,6 +32,9 @@ class About extends React.Component{
                 <div className="about">
                     <h1>Name: {name}</h1>
                     <h1>location: {location}</h1>
+                <UserContext.Consumer >
+                    {(data)=> (<h1>{data.name}</h1>)}
+                </UserContext.Consumer>
                     <h1>designation: CEO<span><sub className="small-font">future</sub></span></h1>
                     <h1>More about us</h1>
                     <p>we are serving people form last one decade, not just delivering food but also the love, care and happiness.</p>

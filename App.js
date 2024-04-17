@@ -3,11 +3,12 @@ import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import Body from "./src/components/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-// import About from "./src/components/About";
 import Contact from "./src/components/Contact";
 import Error from "./src/components/Error";
 import RestaurantDetail from "./src/components/RestaurantDetail";
-// import Grocery from "";
+import appStore from "./src/utils/appStore";
+import { Provider} from "react-redux";
+import UserContext from "./src/utils/UserContext";
 
 // Lazy loading
 
@@ -17,9 +18,15 @@ const About = lazy( ()=> import("./src/components/About"))
 
 const AppLayout = () =>{
     return(
-       <>
-        <Header/>
-        <Outlet />
+        <>
+          <Provider store={appStore}>
+            <UserContext.Provider value={{name: "user"}}>
+                <Header/>
+            </UserContext.Provider>
+                <Outlet />
+          </Provider>
+  
+  
        </> 
     )
 }          

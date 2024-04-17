@@ -4,15 +4,22 @@ import { Link } from "react-router-dom";
 import useInternetStatus from "../utils/useInternetStatus";
 import UserContext from "../utils/UserContext";
 import {useContext} from "react";
+// import { useSelector } from 'react-redux';
+
 
 const Header = () =>{
     
   const status = useInternetStatus();
   const [loginToggle, setLoginToggle] = useState("Login");
 
-  const userContext = useContext(UserContext);
+  const {name} = useContext(UserContext);
 
-  console.log(userContext)
+
+//   const cartItem = useSelector((store)=>{
+
+//   })
+
+//   console.log(cartItem);
 
     return(
         <div className="flex bg-slate-300 justify-between shadow-md shadow-gray-900 mb-4" >
@@ -26,7 +33,8 @@ const Header = () =>{
                 <li><Link to="/about" style={{ textDecoration: 'none' }}>About us</Link></li>
                 <li><Link to="/contact" style={{ textDecoration: 'none' }}>Contact us</Link></li>
                 <li><Link to="/grocery" style={{ textDecoration: 'none' }}>Grocery</Link></li>
-                <li>{userContext.name}</li>
+                <li>{name}</li>
+    
                 </ul>
                 
                 <button className="m-6" onClick={ () => {
