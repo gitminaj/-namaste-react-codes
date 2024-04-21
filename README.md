@@ -446,6 +446,10 @@ Child componentDidMount --> Child2 componentDidMount --> parent componentDidMoun
         ---> HOC is function which takes a component and return a component.<br>
         ---> HOC takes a component enhance it and return it as component.<br>
 
+     + **Controlled and Uncontrolled component**<br>
+       ---> Controlled components refer to the components where the state and behaviors are controlled by Parent components.<br>
+       ---> Uncontrolled components are the ones having control of their own state and manage the behaviors on themselves.<br>
+
      + **Lifting the state up**<br>
         ![image](https://github.com/gitminaj/-namaste-react-codes/assets/75945276/4b5d15a3-0df0-4f33-91d4-7f9195807919)<br>
         ---> To learn the concept I build the collapseable accordian. 
