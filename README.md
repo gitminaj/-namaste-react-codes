@@ -442,19 +442,19 @@ Child componentDidMount --> Child2 componentDidMount --> parent componentDidMoun
 
      ## 11. Learning from eleven episode (Data is new oil)
 
-     + **Higher Order component**
+     + **Higher Order component**<br>
         ---> HOC is function which takes a component and return a component.<br>
         ---> HOC takes a component enhance it and return it as component.<br>
 
-     + **Lifting the state up**
+     + **Lifting the state up**<br>
         ![image](https://github.com/gitminaj/-namaste-react-codes/assets/75945276/4b5d15a3-0df0-4f33-91d4-7f9195807919)<br>
         ---> To learn the concept I build the collapseable accordian. 
 
-     +**Props Drilling**
+     + **Props Drilling**<br>
          ---> Passing data down through nested components in a React application.<br>
          ---> When the hierarchy is too deep props drilling becomes a problem.<br>
 
-     +**UseContext hook**
+     + **UseContext hook**<br>
          ---> UseContext is one of the way to over come the problem of **Props drilling** <br>
          ---> we can create context using createContext.<br>
          ---> we can access(subscribe) it using UseContext hook.<br>
