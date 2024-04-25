@@ -1,8 +1,14 @@
 import { IMG_CDN } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice"
 
 const MenuList = ({ menuDetail }) => {
 
-    console.log(menuDetail)
+    const dispatch = useDispatch();
+
+    const handleClick = (items) =>{
+        dispatch(addItem(items))
+    }
 
     return (
         <div>
@@ -18,11 +24,12 @@ const MenuList = ({ menuDetail }) => {
                                 <p className="text-xs py-2">{description}</p>
                             </div>
 
-                            <div className="m-3">
+                            <div className="m-3 flex flex-col justify-end">
                                 <img 
                                 src={IMG_CDN + imageId} 
-                                className="rounded-md w-32 h-28" 
+                                className="rounded-md max-h-28 max-w-28" 
                                 />
+                                <button className="bg-white mt-1 rounded-sm " onClick={ () => handleClick(items)}> Add </button>
                             </div>
                         </div>
                     )

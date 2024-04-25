@@ -11,7 +11,6 @@ const RestaurantCategory = ({Menu,clickStatus,setShowIndex}) => {
         setShowIndex()
     }
 
-    console.log(localClickStatus)
 
     return(
         <div className="border-b-2 flex flex-col ">

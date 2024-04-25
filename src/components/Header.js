@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import useInternetStatus from "../utils/useInternetStatus";
 import UserContext from "../utils/UserContext";
 import {useContext} from "react";
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 
 const Header = () =>{
@@ -15,11 +15,9 @@ const Header = () =>{
   const {name} = useContext(UserContext);
 
 
-//   const cartItem = useSelector((store)=>{
+//   const cartItem = useSelector((store)=> (store.cart.items.length) )
+  const cartItem = useSelector((store)=> (store.cart.items.length) )
 
-//   })
-
-//   console.log(cartItem);
 
     return(
         <div className="flex bg-slate-300 justify-between shadow-md shadow-gray-900 mb-4" >
@@ -34,7 +32,7 @@ const Header = () =>{
                 <li><Link to="/contact" style={{ textDecoration: 'none' }}>Contact us</Link></li>
                 <li><Link to="/grocery" style={{ textDecoration: 'none' }}>Grocery</Link></li>
                 <li>{name}</li>
-    
+                <li><Link to="/cart" className="no-underline"> cart : {cartItem}</Link></li>
                 </ul>
                 
                 <button className="m-6" onClick={ () => {
