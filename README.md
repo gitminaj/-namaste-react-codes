@@ -439,5 +439,34 @@ Child componentDidMount --> Child2 componentDidMount --> parent componentDidMoun
    + **Below is my home page after using tailwind**<br><br>
      ![image](https://github.com/gitminaj/-namaste-react-codes/assets/75945276/4f664e85-fc44-4147-aa5c-2acf34fab7a2)
 
+
+     ## 11. Learning from eleven episode (Data is new oil)
+
+     + **Higher Order component**<br>
+        ---> HOC is function which takes a component and return a component.<br>
+        ---> HOC takes a component enhance it and return it as component.<br>
+
+     + **Controlled and Uncontrolled component**<br>
+       ---> Controlled components refer to the components where the state and behaviors are controlled by Parent components.<br>
+       ---> Uncontrolled components are the ones having control of their own state and manage the behaviors on themselves.<br>
+
+     + **Lifting the state up**<br>
+        ![image](https://github.com/gitminaj/-namaste-react-codes/assets/75945276/4b5d15a3-0df0-4f33-91d4-7f9195807919)<br>
+        ---> To learn the concept I build the collapseable accordian. 
+
+     + **Props Drilling**<br>
+         ---> Passing data down through nested components in a React application.<br>
+         ---> When the hierarchy is too deep props drilling becomes a problem.<br>
+
+     + **UseContext hook**<br>
+         ---> UseContext is one of the way to over come the problem of **Props drilling** <br>
+         ---> we can create context using createContext.<br>
+         ---> we can access(subscribe) it using UseContext hook.<br>
+         ---> we can subscribe context in class base as <context.Consumer>.<br>
+         ---> To update value of context we can use <context.Provider value={}>.<br>
+         ---> Pass <context.Provider value={}> as parent to the component where you want to access that data.<br>
+       
+
+
    
 Most React tutorials typically commence with the installation of a bundler and swiftly transition to React code. However, this particular tutorial takes a distinctive approach by elucidating the entire process from the ground up. It delves into the intricacies of constructing React, leaving me astounded and pleasantly surprised at every turn. Each minute unfolds a new revelation, fostering a continuous learning experience.
