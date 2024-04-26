@@ -1,16 +1,29 @@
 import { useSelector } from "react-redux";
 import { IMG_CDN } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import  {clearCart, deleteItem}  from "../utils/cartSlice";
 
 
 const Cart = () =>{
     const items = useSelector((store) => store.cart.items);
-    console.log(items)
+
+    const dispatch = useDispatch();
+
+    const handleClearCart = () =>{
+        dispatch(clearCart());
+    }
+    
+    const handleRemove = (index) =>{
+        dispatch(deleteItem(index));
+    }
     return(
+        <>
+        
         <div>
             <h1 className="text-center font-bold text-2xl mb-2">Cart</h1>
             <div className="w-3/5 m-auto">
                     {
-                        items.map((items) => {
+                        items.map((items, index) => {
                             const { id, name, description, defaultPrice, price, imageId } = items?.card?.info;
                             return (
                                 <div key={id} className="flex justify-between cursor-pointer bg-gray-100">
@@ -26,14 +39,16 @@ const Cart = () =>{
                                         src={IMG_CDN + imageId} 
                                         className="rounded-md max-w-28 h-28" 
                                         />
-                                        <button className="bg-white mt-1 rounded-sm " onClick={ () => handleClick(items)}> Remove </button>
+                                        <button className="bg-white mt-1 rounded-sm " onClick={ () => handleRemove(index)}> Remove </button>
                                     </div>
                                 </div>
                             )
                         })
                     }
+                    <h1 className="text-center font-bold mt-2 cursor-pointer" onClick={handleClearCart}>Clear Cart</h1>
             </div>
         </div>
+    </>
     )
 }
 

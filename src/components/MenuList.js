@@ -29,7 +29,7 @@ const MenuList = ({ menuDetail }) => {
                                 src={IMG_CDN + imageId} 
                                 className="rounded-md max-h-28 max-w-28" 
                                 />
-                                <button className="bg-white mt-1 rounded-sm " onClick={ () => handleClick(items)}> Add </button>
+                                <button className="bg-white mt-1 rounded-sm hover:bg-slate-500" onClick={ () => handleClick(items)}> Add </button>
                             </div>
                         </div>
                     )
